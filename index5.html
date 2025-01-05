@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="./border.png" height="100vh" width="50px" />
+        <div class="sidebar">
+            <div class="profile">
+                <h2>User Profile</h2>
+            </div>
+            <ul class="menu">
+                <li><button onclick="addTaskPrompt('bulletin1')">Add task to My Projects</button></li>
+                <li><button onclick="addTaskPrompt('bulletin2')">Add task to Teams</button></li>
+                <li>
+                    <img src="search2.png" height="15px" width="15px">
+                    <button>Search</button>
+                </li>
+                <li>
+                    <img src="inbox2.png" height="15px" width="15px">
+                    <button onclick="openOverlay('inboxOverlay')">Inbox (<span id="inboxCount">0</span>)</button>
+                </li>
+                <li>
+                    <img src="today.jpg" height="15px" width="15px">
+                    <button>Today</button>
+                </li>
+                <li>
+                    <img src="upcoming.jpg" height="15px" width="15px">
+                    <button>Upcoming</button>
+                </li>
+                <li>
+                    <img src="filter.jpg" height="15px" width="15px">
+                    <button>Filters & Labels</button>
+                </li>
+            </ul>
+            <div class="projects">
+                <div class="folder">
+                    <h2>My Folder</h2> 
+                    <button class="addFileBtn">Add File</button>
+                    <div id="fileList" class="file-list"></div> <!-- Files will be added here --> 
+                </div>
+            </div>
+            <div class="team">
+                <h3>Team</h3>
+                <ul>
+                    <li>New Brand</li>
+                    <li>Website Update</li>
+                    <li>Product Roadmap</li>
+                    <li>Meeting Agenda</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Today</h1>
+            <div class="tasks" id="bulletin1">
+                <h3>My Projects</h3>
+                <ul>
+                    <li>Do 30 minutes of yoga at 7:30 AM <button onclick="deleteTask(this)">Delete</button> <button onclick="openTimerOverlay(this)">Complete</button></li>
+                    <li>Dentist appointment at 10:00 AM <button onclick="deleteTask(this)">Delete</button> <button onclick="openTimerOverlay(this)">Complete</button></li>
+                    <li>Buy bread <button onclick="deleteTask(this)">Delete</button> <button onclick="openTimerOverlay(this)">Complete</button></li>
+                </ul>
+            </div>
+            <div class="tasks" id="bulletin2">
+                <h3>Team</h3>
+                <ul>
+                    <li>Plan user research sessions at 2:00 PM <button onclick="deleteTask(this)">Delete</button> <button onclick="openTimerOverlay(this)">Complete</button></li>
+                    <li>Provide feedback on Amy's design <button onclick="deleteTask(this)">Delete</button> <button onclick="openTimerOverlay(this)">Complete</button></li>
+                    <li>All-hands meeting <button onclick="deleteTask(this)">Delete</button> <button onclick="openTimerOverlay(this)">Complete</button></li>
+                </ul>
+            </div>
+            <div class="inbox-overlay" id="inboxOverlay">
+                <div class="overlay-content">
+                    <span class="closebtn" onclick="closeOverlay('inboxOverlay')">&times;</span>
+                    <h2>Inbox</h2>
+                    <ul id="inboxList"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="timer-overlay" id="timerOverlay">
+            <div class="overlay-content">
+                <span class="closebtn" onclick="closeOverlay('timerOverlay')">&times;</span>
+                <h2>Set Timer</h2>
+                <form id="timerForm">
+                    <label for="timerInput">Enter time in seconds:</label>
+                    <input type="number" id="timerInput" name="timerInput" required>
+                    <button type="submit">Start Timer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./java6.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+

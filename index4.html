@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <h2>User Profile</h2>
+        </div>
+        <ul class="menu">
+            <li><button onclick="addTaskPrompt('bulletin1')">Add task to Bulletin 1</button></li>
+            <li><button onclick="addTaskPrompt('bulletin2')">Add task to Bulletin 2</button></li>
+            <li><button onclick="showInbox()">Inbox (<span id="inboxCount">0</span>)</button></li>
+            <li><button>Today</button></li>
+            <li><button>Upcoming</button></li>
+            <li><button>Filters & Labels</button></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Today</h1>
+        <div class="tasks" id="bulletin1">
+            <h3>My Projects</h3>
+            <ul>
+                <li>Do 30 minutes of yoga at 7:30 AM <button onclick="deleteTask(this)">Delete</button></li>
+                <li>Dentist appointment at 10:00 AM <button onclick="deleteTask(this)">Delete</button></li>
+                <li>Buy bread <button onclick="deleteTask(this)">Delete</button></li>
+            </ul>
+        </div>
+        <div class="tasks" id="bulletin2">
+            <h3>Team</h3>
+            <ul>
+                <li>Plan user research sessions at 2:00 PM <button onclick="deleteTask(this)">Delete</button></li>
+                <li>Provide feedback on Amy's design <button onclick="deleteTask(this)">Delete</button></li>
+                <li>All-hands meeting <button onclick="deleteTask(this)">Delete</button></li>
+            </ul>
+        </div>
+        <div class="inbox" id="inbox">
+            <h2>Inbox</h2>
+            <ul id="inboxList"></ul>
+        </div>
+    </div>
+    <script src="java4.js"></script>
+</body>
+</html>
