@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="ui.css">
+</head>
+
+<body>
+    <div class="notepad-container">
+        <img src="home1.png" alt="Home" class="home-icon" onclick="goHome()">
+        <textarea id="notes" placeholder="Write your notes here..."></textarea>
+        <button onclick="saveNotes()">Save</button>
+    </div>
+
+    <script>
+        function saveNotes() {
+            const fileId = new URLSearchParams(window.location.search).get('fileId');
+            const notes = document.getElementById('notes').value;
+            localStorage.setItem(fileId, notes);
+            alert('Notes saved!');
+        }
+
+        window.onload = function() {
+            const fileId = new URLSearchParams(window.location.search).get('fileId');
+            const savedNotes = localStorage.getItem(fileId);
+            if (savedNotes) {
+                document.getElementById('notes').value = savedNotes;
+            }
+        }
+
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

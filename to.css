@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    background-image: url('./bg7.jpeg');
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+input, select, button {
+    display: block;
+    background-image: url('./bg5.png');
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color:#892aa3;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: url('./bg1.jpg');
+}
+
+.task-list {
+    background-image: url('./bg7.jpeg');
+    color:#ffffff;
+    list-style-type: none;
+    padding: 0;
+}
+
+.task {
+    background-image: url('./bg5.png');
+    color:#ffffff;
+    border: 1px solid #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task.completed {
+    background-image: url('./bg5.png');
+    color:#ffffff;
+    border-color: #ffffff;
+    text-decoration: line-through;
+}
+
+.task button {
+    color:#ffffff;
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.task button.complete {
+    background-image: url('./bg5.png');
+    color: #ffffff;
+}
+
+.task button.delete {
+    background-image: url('./bg7.jpeg');
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.task button:hover.complete {
+    background-image: url('./bg4.jpg');
+}
+
+.task button:hover.delete {
+    background-image: url('./bg.jpg');
+}
+
+.x
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}

@@ -11,12 +11,13 @@
 <body>
 
     <div class="container">
-        <!-- Sidebar with menu and projects -->
+       <!-- <img src="./border.jpg" ,height="100vh" , width="50px" /> -->
         <div class="sidebar">
             <div class="profile">
                 <h2>User Profile</h2>
             </div>
             <ul class="menu">
+                
                 <li>
                     <img src="./search-removebg-preview.png" height="20px" ,width="20px">
                     <button>Search</button>
@@ -27,7 +28,7 @@
                 </li>
                 <li>
                     <img src="./today-removebg-preview.png" height="20px" ,width="20px">
-                    <button onclick="location.href='today1.html'">Today (<span id="todayCount">0</span>)</button>
+                    <button>Today</button>
                 </li>
                 <li>
                     <img src="./upcoming-removebg-preview.png" height="20px" ,width="20px">
@@ -40,40 +41,39 @@
             </ul>
             <div class="projects">
                 <div class="folder">
-                    <h2>Notes</h2>
+                    <h2>My Folder</h2> 
                     <button class="addFileBtn">Add File</button>
-                    <div id="fileList" class="file-list">
-                        <!-- Files will be added here -->
+                    <div id="fileList" class="file-list"> 
+                        <!-- Files will be added here --> 
                     </div>
-                    <button class="clearAllBtn">Clear All</button>
                 </div>
             </div>
-           
+            <div class="team">
+                <h3>Team</h3>
+                <ul>
+                    <li>New Brand</li>
+                    <li>Website Update</li>
+                    <li>Product Roadmap</li>
+                    <li>Meeting Agenda</li>
+                </ul>
+            </div>
         </div>
-        <!-- Main content area -->
         <div class="main-content">
             <h1>Today</h1>
             <div class="tasks" id="bulletin1">
                 <h3>My Projects</h3>
                 <ul>
-                    <li>Do 30 minutes of yoga at 7:30 AM 
-                        <img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
-                        <img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
-                        <img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>
-                    </li>
+                    <li>Do 30 minutes of yoga at 7:30 AM <img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/><img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/><img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/></li>
+                    
                 </ul>
             </div>
             <div class="tasks" id="bulletin2">
                 <h3>Team</h3>
                 <ul>
-                    <li>Study
-                        <img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
-                        <img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
-                        <img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)" />
-                    </li>
+                    <li>Study<img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/><img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/><img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)" /></li>
+                    
                 </ul>
             </div>
-            <!-- Overlay for Inbox -->
             <div class="inbox-overlay" id="inboxOverlay">
                 <div class="overlay-content">
                     <span class="closebtn" onclick="closeOverlay('inboxOverlay')">&times;</span>
@@ -83,20 +83,17 @@
                     </ul>
                 </div>
             </div>
-            <!-- Add Task Button -->
             <div class="circle">
-                <span id="plus" onclick="openToDoOverlay('addOverlay')">&plus;</span>
+                <span id="plus" onclick="openToDoOverlay('addOverlay')">&plus;</span></button>  
             </div>
-            <!-- Overlay for Adding Tasks -->
             <div class="add-overlay" id="addOverlay">
                 <div class="overlay-content">
                     <span class="closebtn" onclick="closeOverlay('addOverlay')">&times;</span>
                     <h2>To Do</h2>
-                    <button onclick="addTaskPrompt('bulletin1')">Add task to My Projects</button>
-                    <button onclick="addTaskPrompt('bulletin2')">Add task to Teams</button>
+                    <button onclick="addTaskPrompt('bulletin1')">Add task to My Projects</button></li>
+                    <button onclick="addTaskPrompt('bulletin2')">Add task to Teams</button></li>
                 </div>
             </div>
-            <!-- Timer Overlay -->
             <div class="timer-overlay" id="timerOverlay">
                 <div class="overlay-content">
                     <span class="closebtn" onclick="closeOverlay('timerOverlay')">&times;</span>
@@ -106,13 +103,19 @@
                         <input type="number" id="timerInput" name="timerInput" required>
                         <button type="submit" onclick="startTimer()">Start Timer</button>
                     </form>
+                    
+                    <!--<div id="timerControls" style="display:none;">
+                        <p id="timerDisplay">Time left: 0s</p>
+                        <button id="deleteTaskButton">Delete Task</button>
+                        <button id="keepTaskButton">Keep Task</button>
+                    </div> -->
                 </div>
             </div>
-            <!-- Timer Display Overlay -->
             <div class="timer-overlay2" id="timerOverlay2">
                 <div class="overlay-content">
                     <span class="closebtn" onclick="closeOverlay('timerOverlay2')">&times;</span>
                     <h1>TIMER</h1>
+                    <br />
                     <div id="timer">00:00</div>
                     <button id="deleteTaskButton">Delete Task</button>
                     <button id="keepTaskButton">Keep Task</button>
@@ -121,10 +124,6 @@
         </div>
     </div>
     <script src="java7.js"></script>
-    <script src="delete.js"></script>
-    <script src="function.js"></script>
-    <script src="taskCount.js"></script>
-
 </body>
 
 </html>

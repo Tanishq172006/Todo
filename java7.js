@@ -3,24 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTaskButtons = document.querySelectorAll('.addFileBtn');
     const inboxList = document.getElementById('inboxList');
     const inboxCount = document.getElementById('inboxCount');
+    
     let currentTaskElement = null;
     let timerInterval;
 
-    addTaskButtons.forEach(button => {
+    /* addTaskButtons.forEach(button => {
         button.addEventListener('click', () => {
             const folder = button.parentElement;
             const fileList = folder.querySelector('.file-list');
             let fileCount = fileList.children.length + 1;
-
+    
             const file = document.createElement('div');
-            file.className = 'file';
-            file.textContent = `File ${fileCount}`;
+            const link = document.createElement('a');
+            link.href = 'file.html';
+            link.textContent = `File ${fileCount}`;
+            file.appendChild(link);
             fileList.appendChild(file);
-            fileList.scrollTop = fileList.scrollHeight; // Scroll to the bottom
-
+            fileList.scrollTop = fileList.scrollHeight;
+    
             addToInbox(`File ${fileCount} added to ${folder.querySelector('h2').textContent}`);
         });
-    });
+    }); */
+    
 
     window.addTaskPrompt = function (bulletinId) {
         const task = prompt("Enter new task:");
