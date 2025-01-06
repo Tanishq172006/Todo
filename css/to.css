@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    background-image: url('./bg7.jpeg');
+    background-image: url('../backgrounds/bg7.jpg');
     margin: 0;
     padding: 20px;
 }
@@ -13,7 +13,7 @@ h1 {
 
 input, select, button {
     display: block;
-    background-image: url('./bg5.png');
+    background-image: url('../backgrounds/bg5.png');
     width: 100%;
     margin: 10px 0;
     padding: 10px;
@@ -28,18 +28,18 @@ button {
 }
 
 button:hover {
-    background-image: url('./bg1.jpg');
+    background-image: url('../backgrounds/bg1.jpg');
 }
 
 .task-list {
-    background-image: url('./bg7.jpeg');
+    background-image: url('../backgrounds/bg7.jpg');
     color:#ffffff;
     list-style-type: none;
     padding: 0;
 }
 
 .task {
-    background-image: url('./bg5.png');
+    background-image: url('../backgrounds/bg5.png');
     color:#ffffff;
     border: 1px solid #ffffff;
     margin: 10px 0;
@@ -49,7 +49,7 @@ button:hover {
 }
 
 .task.completed {
-    background-image: url('./bg5.png');
+    background-image: url('../backgrounds/bg5.png');
     color:#ffffff;
     border-color: #ffffff;
     text-decoration: line-through;
@@ -63,22 +63,22 @@ button:hover {
 }
 
 .task button.complete {
-    background-image: url('./bg5.png');
+    background-image: url('../backgrounds/bg5.png');
     color: #ffffff;
 }
 
 .task button.delete {
-    background-image: url('./bg7.jpeg');
+    background-image: url('../backgrounds/bg7.jpg');
     color: #ffffff;
     margin-left: 5px;
 }
 
 .task button:hover.complete {
-    background-image: url('./bg4.jpg');
+    background-image: url('../backgrounds/bg4.jpg');
 }
 
 .task button:hover.delete {
-    background-image: url('./bg.jpg');
+    background-image: url('../backgrounds/bg.jpg');
 }
 
 .x

@@ -2,16 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('./bg3.jpg');
+    background-image: url('../backgrounds/bg3.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('./bg4.jpg');
+    background-image: url('../backgrounds/bg4.jpg');
 }
 
 .notepad-container {
-    background-image: url('./bg1.jpg');
+    background-image: url('../backgrounds/bg1.jpg');
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -36,14 +36,14 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-image: url('./bg7.jpeg');
+    background-image: url('../backgrounds/bg7.jpg');
     color: aliceblue;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-image: url('./bg4.jpg');
+    background-image: url('../backgrounds/bg4.jpg');
     color: white;
     border: none;
     border-radius: 4px;

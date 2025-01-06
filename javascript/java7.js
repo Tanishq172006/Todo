@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const bulletin = document.getElementById(bulletinId);
         const ul = bulletin.querySelector('ul');
         const li = document.createElement('li');
-        li.innerHTML = `${task} <img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/><img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/><img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>`;
+        li.innerHTML = `${task} <img src="./icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
+                        <img src="./icons/bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
+                        <img src="./icons/tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>`;
         ul.appendChild(li);
     }
 

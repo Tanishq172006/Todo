@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Management App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -18,23 +18,23 @@
             </div>
             <ul class="menu">
                 <li>
-                    <img src="./search-removebg-preview.png" height="20px" ,width="20px">
+                    <img src="./icons/search-removebg-preview.png" height="20px" ,width="20px">
                     <button>Search</button>
                 </li>
                 <li>
-                    <img src="./inbox-removebg-preview.png" height="20px" ,width="20px">
+                    <img src="./icons/inbox-removebg-preview.png" height="20px" ,width="20px">
                     <button onclick="openOverlay('inboxOverlay')">Inbox (<span id="inboxCount">0</span>)</button>
                 </li>
                 <li>
-                    <img src="./today-removebg-preview.png" height="20px" ,width="20px">
-                    <button onclick="location.href='today1.html'">Today (<span id="todayCount">0</span>)</button>
+                    <img src="./icons/today-removebg-preview.png" height="20px" ,width="20px">
+                    <button onclick="location.href='today.html'">Today (<span id="todayCount">0</span>)</button>
                 </li>
                 <li>
-                    <img src="./upcoming-removebg-preview.png" height="20px" ,width="20px">
+                    <img src="./icons/upcoming-removebg-preview.png" height="20px" ,width="20px">
                     <button>Upcoming</button>
                 </li>
                 <li>
-                    <img src="./filter-removebg-preview.png" height="20px" ,width="20px">
+                    <img src="./icons/filter-removebg-preview.png" height="20px" ,width="20px">
                     <button>Filters & Labels</button>
                 </li>
             </ul>
@@ -57,9 +57,9 @@
                 <h3>My Projects</h3>
                 <ul>
                     <li>Do 30 minutes of yoga at 7:30 AM 
-                        <img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
-                        <img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
-                        <img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>
+                        <img src="./icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
+                        <img src="./icons/bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
+                        <img src="./icons/tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>
                     </li>
                 </ul>
             </div>
@@ -67,9 +67,9 @@
                 <h3>Team</h3>
                 <ul>
                     <li>Study
-                        <img src="./TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
-                        <img src="./bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
-                        <img src="./tick-removebg-preview.png" id="tick" onclick="completeTask(this)" />
+                        <img src="./icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/>
+                        <img src="./icons/bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/>
+                        <img src="./icons/tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>
                     </li>
                 </ul>
             </div>
@@ -120,10 +120,10 @@
             </div>
         </div>
     </div>
-    <script src="java7.js"></script>
-    <script src="delete.js"></script>
-    <script src="function.js"></script>
-    <script src="taskCount.js"></script>
+    <script src="./javascript/java7.js"></script>
+    <script src="./javascript/delete.js"></script>
+    <script src="./javascript/function.js"></script>
+    <script src="./javascript/taskCount.js"></script>
 
 </body>
 

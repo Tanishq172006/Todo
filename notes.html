@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
-    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="./css/ui.css">
 </head>
 
 <body>
     <div class="notepad-container">
-        <img src="home1.png" alt="Home" class="home-icon" onclick="goHome()">
+        <img src="./icons/home1.png" alt="Home" class="home-icon" onclick="goHome()">
         <textarea id="notes" placeholder="Write your notes here..."></textarea>
         <button onclick="saveNotes()">Save</button>
     </div>
@@ -32,7 +32,7 @@
         }
 
         function goHome() {
-            window.location.href = 'index.html';
+            window.location.href = './index.html';
         }
     </script>
 </body>

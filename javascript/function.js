@@ -85,5 +85,5 @@ function addTask() {
 }
 
 function goHome() {
-    window.location.href = 'index1.html';
+    window.location.href = '../index.html';
 }

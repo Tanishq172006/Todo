@@ -51,7 +51,7 @@ function loadFiles() {
 }
 
 function openNotes(fileId) {
-    window.location.href = `file.html?fileId=${fileId}`;
+    window.location.href = `notes.html?fileId=${fileId}`;
 }
 
 function deleteFile(fileId, button) {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Calendar</title>
+    <link rel="stylesheet" href="./css/to.css">
+    <style>
+        body { color: #ffffff; font-family: Arial, sans-serif; }
+        .task-list { list-style-type: none; padding: 0; }
+        .task { color: white; padding: 10px; border: 1px solid #ffffff; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Today Calendar</h1>
+    <div id="taskCount">Total Tasks: 0</div>
+    <input type="text" id="title" placeholder="Task Title">
+    <input type="text" id="description" placeholder="Task Description">
+    <input type="time" id="time">
+    <select id="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList" class="task-list"></ul>
+    <div><a href="index.html"><img src="./icons/home1.png" alt="Home" class="x"></a></div>
+
+    <script src="./javascript/function.js"></script>
+</body>
+</html>
+
+
