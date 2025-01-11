@@ -40,18 +40,19 @@ class TodayCalendar {
             <div class="task">
                 <div class="task-header">
                     <h3>${task.title}</h3>
-                <div class="task-actions">
-                    <img src="../icons/timer.png" id="clock" onclick="openTimerOverlay(this)" alt="Timer"/>
-                    <img src="../icons/bin.png" id="delete" onclick="calendar.deleteTask('${task.title}','${task.time}')" alt="Delete"/>
-                    <img src="../icons/tick.png" id="tick" onclick="calendar.completeTask('${task.title}')" alt="Complete"/>
+                    <div class="task-actions">
+                        <img src="../icons/timer.png" id="clock" onclick="openTimerOverlay(this)" alt="Timer"/>
+                        <img src="../icons/bin.png" id="delete" onclick="calendar.deleteTask('${task.title}','${task.time}')" alt="Delete"/>
+                        <img src="../icons/tick.png" id="tick" onclick="calendar.completeTask('${task.title}')" alt="Complete"/>
+                    </div>
                 </div>
-            </div>
-                <div class="task-details">
-                    <p><strong>Description:</strong> ${task.description}</p>
-                    <p><strong>Time:</strong> ${task.time}</p>
-                    <p><strong>Date:</strong> ${task.dateInput}</p>
-                    <p><strong>Priority:</strong> ${task.priority}</p>
-                    <p><strong>Status:</strong> ${task.completed ? 'Completed' : 'Pending'}</p>
+                    <div class="task-details">
+                        <p><strong>Description:</strong> ${task.description}</p>
+                        <p><strong>Time:</strong> ${task.time}</p>
+                        <p><strong>Date:</strong> ${task.dateInput}</p>
+                        <p><strong>Priority:</strong> ${task.priority}</p>
+                        <p><strong>Status:</strong> ${task.completed ? 'Completed' : 'Pending'}</p>
+                    </div>
                 </div>
             </div>`;
             taskList.appendChild(taskItem);
@@ -114,6 +115,9 @@ function displayTasks() {
             taskItem.className = 'task';
             taskItem.innerHTML = `
                 <div class="task">
+
+
+                </div>
                     
                     
                     <div class="task-details">
