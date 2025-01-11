@@ -113,11 +113,8 @@ function addTask() {
 
     if (title && description && time && date) {
         calendar.addTask(title, description, time, priority, date);
-        
     } else {
         alert('Please fill in all fields.');
     }
-
-    
 }
 

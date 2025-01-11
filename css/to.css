@@ -90,3 +90,39 @@ button:hover {
     height: 50px;
     cursor: pointer;
 }
+
+/* Add this to your styles.css file */
+.task {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.task-header h3 {
+    margin: 0;
+}
+
+.task-actions img {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-details p {
+    margin: 5px 0;
+}
+
+.task-details p strong {
+    font-weight: bold;
+}
+

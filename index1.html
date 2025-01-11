@@ -27,7 +27,7 @@
                 </li>
                 <li>
                     <img src="./icons/today-removebg-preview.png" height="20px" ,width="20px">
-                    <button onclick="location.href='./today.html'">Today (<span id="todayCount">0</span>)</button>
+                    <button onclick="location.href='today.html'">Today (<span id="todayCount">0</span>)</button>
                 </li>
                 <li>
                     <img src="./icons/upcoming-removebg-preview.png" height="20px" ,width="20px">
@@ -52,16 +52,27 @@
         </div>
         <!-- Main content area -->
         <div class="main-content">
-            <h1>All tasks</h1>
+            <h1>Todo</h1>
             <div class="tasks" id="bulletin1">
-                <h3>My Tasks</h3>
-                <ul id="taskList" class="task-list">
-                    <li>
-
+                <h3>My Projects</h3>
+                <ul>
+                    <li>Do 30 minutes of yoga at 7:30 AM
+                        <img src="./icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)" />
+                        <img src="./icons/bin-removebg-preview.png" id="delete" onclick="deleteTask(this)" />
+                        <img src="./icons/tick-removebg-preview.png" id="tick" onclick="completeTask(this)" />
                     </li>
                 </ul>
             </div>
-            
+            <div class="tasks" id="bulletin2">
+                <h3>Team</h3>
+                <ul>
+                    <li>Study
+                        <img src="./icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)" />
+                        <img src="./icons/bin-removebg-preview.png" id="delete" onclick="deleteTask(this)" />
+                        <img src="./icons/tick-removebg-preview.png" id="tick" onclick="completeTask(this)" />
+                    </li>
+                </ul>
+            </div>
             <!-- Overlay for Inbox -->
             <div class="inbox-overlay" id="inboxOverlay">
                 <div class="overlay-content">
@@ -79,25 +90,24 @@
             <!-- Overlay for Adding Tasks -->
             <div class="add-overlay" id="addOverlay">
                 <div class="overlay-content">
+
                     <span class="closebtn" onclick="closeOverlay('addOverlay')">&times;</span>
-                    
-                    <h1>Your Tasks</h1>
+                    <h1>Today Calendar</h1>
                     <div id="taskCount">Total Tasks: 0</div>
                     <input type="text" id="title" placeholder="Task Title">
                     <input type="text" id="description" placeholder="Task Description">
                     <input type="time" id="time">
-                    <input type="date" id="date-input">
                     <select id="priority">
                         <option value="High">High</option>
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
                     </select>
-                    <button onclick="setAlert()">Set Alert</button>
                     <button onclick="addTask()">Add Task</button>
-                    <!-- <ul id="taskList" class="task-list"></ul> -->
-                    
-
+                    <ul id="taskList" class="task-list"></ul>
                     <script src="./javascript/function.js"></script>
+                    <h2>To Do</h2>
+                    <button onclick="addTaskPrompt('bulletin1')">Add task to My Projects</button>
+                    <button onclick="addTaskPrompt('bulletin2')">Add task to Teams</button>
                 </div>
             </div>
             <!-- Timer Overlay -->
