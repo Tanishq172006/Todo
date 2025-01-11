@@ -36,18 +36,14 @@ class TodayCalendar {
         this.tasks.forEach(task => {
             const taskItem = document.createElement('li');
             taskItem.className = 'task';
-            //const ul = bulletin.querySelector('ul');
-            //const li = document.createElement('li');
-            //taskItem.innerHTML = `${title} <img src="../icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)"/><img src="../icons/bin-removebg-preview.png" id="delete" onclick="deleteTask(this)"/><img src="../icons/tick-removebg-preview.png" id="tick" onclick="completeTask(this)"/>`;
-            //ul.appendChild(li);
             taskItem.innerHTML = `
             <div class="task">
                 <div class="task-header">
                     <h3>${task.title}</h3>
                 <div class="task-actions">
-                    <img src="../icons/TIMER-removebg-preview.png" id="clock" onclick="openTimerOverlay(this)" alt="Timer"/>
-                    <img src="../icons/bin-removebg-preview.png" id="delete" onclick="calendar.deleteTask('${task.title}','${task.time}')" alt="Delete"/>
-                    <img src="../icons/tick-removebg-preview.png" id="tick" onclick="calendar.completeTask('${task.title}')" alt="Complete"/>
+                    <img src="../icons/timer.png" id="clock" onclick="openTimerOverlay(this)" alt="Timer"/>
+                    <img src="../icons/bin.png" id="delete" onclick="calendar.deleteTask('${task.title}','${task.time}')" alt="Delete"/>
+                    <img src="../icons/tick.png" id="tick" onclick="calendar.completeTask('${task.title}')" alt="Complete"/>
                 </div>
             </div>
                 <div class="task-details">
@@ -58,7 +54,7 @@ class TodayCalendar {
                     <p><strong>Status:</strong> ${task.completed ? 'Completed' : 'Pending'}</p>
                 </div>
             </div>`;
-taskList.appendChild(taskItem);
+            taskList.appendChild(taskItem);
 
         });
     }
@@ -139,9 +135,9 @@ function displayTasks() {
 // Call displayTasks periodically every minute
 setInterval(displayTasks, 60000);
 
-function goHome() {
-    window.location.href = 'index.html';
-}
+/*function goHome() {
+    window.location.href = '../index.html';
+}*/
 
 function setAlert() {
     const dateInput = document.getElementById('date-input').value;

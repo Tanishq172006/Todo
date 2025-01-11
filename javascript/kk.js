@@ -53,7 +53,7 @@ setInterval(displayTasks, 60000);
 // Initial call to display today's tasks
 document.addEventListener('DOMContentLoaded', displayTasks);
 
-function goHome() {
-    window.location.href = 'index1.html';
-}
+/*function goHome() {
+    window.location.href = '../index.html';
+}*/
 
