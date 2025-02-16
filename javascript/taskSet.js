@@ -1,5 +1,5 @@
 class Task {
-    constructor(title, description, time, priority, completed, dateInput = false) {
+    constructor(title, description, time, priority, dateInput, completed) {
         this.title = title;
         this.description = description;
         this.time = time;
@@ -19,8 +19,8 @@ class TodayCalendar {
         this.renderTasks();
     }
 
-    addTask(title, description, time, priority) {
-        const task = new Task(title, description, time, priority);
+    addTask(title, description, time, priority, dateInput) {
+        const task = new Task(title, description, time, priority, dateInput);
         this.tasks.push(task);
         this.saveTasks();
         this.renderTasks();
@@ -45,18 +45,17 @@ class TodayCalendar {
                         <img src="../icons/bin.png" id="delete" onclick="calendar.deleteTask('${task.title}','${task.time}')" alt="Delete"/>
                         <img src="../icons/tick.png" id="tick" onclick="calendar.completeTask('${task.title}')" alt="Complete"/>
                     </div>
-                </div>
+                
                     <div class="task-details">
                         <p><strong>Description:</strong> ${task.description}</p>
                         <p><strong>Time:</strong> ${task.time}</p>
-                        <p><strong>Date:</strong> ${task.dateInput}</p>
+                        <p><strong>Date:</strong> ${task.dateInput || 'No date provided'}</p>
                         <p><strong>Priority:</strong> ${task.priority}</p>
                         <p><strong>Status:</strong> ${task.completed ? 'Completed' : 'Pending'}</p>
                     </div>
                 </div>
             </div>`;
             taskList.appendChild(taskItem);
-
         });
     }
 
@@ -96,7 +95,7 @@ function addTask(bulletinId) {
 
 
     if (title && description && time) {
-        calendar.addTask(title, description, time, priority);
+        calendar.addTask(title, description, time, priority, dateInput);
     } else {
         alert('Please fill in all fields.');
     }
@@ -114,10 +113,14 @@ function displayTasks() {
             const taskItem = document.createElement('li');
             taskItem.className = 'task';
             taskItem.innerHTML = `
-                <div class="task">
-
-
-                </div>
+            <div class="task">
+                <div class="task-header">
+                    <h3>${task.title}</h3>
+                    <div class="task-actions">
+                        <img src="../icons/timer.png" id="clock" onclick="openTimerOverlay(this)" alt="Timer" />
+                        <img src="../icons/bin.png" id="delete" onclick="calendar.deleteTask('${task.title}','${task.time}')" alt="Delete" />
+                        <img src="../icons/tick.png" id="tick" onclick="calendar.completeTask('${task.title}')" alt="Complete" />
+                    </div>
                     
                     
                     <div class="task-details">
@@ -128,8 +131,10 @@ function displayTasks() {
                         <p><strong>Status:</strong> ${task.completed ? 'Completed' : 'Pending'}</p>
                     </div>
                 </div>
-            `;
+            </div>`;
             taskList.appendChild(taskItem);
+            console.log(taskItem.innerHTML);
+
         }
     });
 

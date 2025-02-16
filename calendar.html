@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Interface</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+</head>
+
+<body>
+    <div class="calendar">
+        <!-- Header with month and navigation -->
+        <div class="calendar-header">
+            <button onclick="prevMonth()">&#8249;</button>
+            <h1 id="monthYear">January 2025</h1>
+            <button onclick="nextMonth()">&#8250;</button>
+        </div>
+
+        <!-- Weekday labels -->
+        <div class="calendar-days">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+
+        <!-- Calendar grid -->
+        <div class="calendar-grid" id="calendarGrid">
+            <!-- JavaScript will populate the dates -->
+        </div>
+    </div>
+    <script src="./javascript/calendar.js"></script>
+</body>
+
+</html>

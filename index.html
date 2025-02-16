@@ -31,7 +31,7 @@
                 </li>
                 <li>
                     <img src="./icons/upcoming.png" height="20px" ,width="20px">
-                    <button>Upcoming</button>
+                    <button onclick="calenderOpen()">Upcoming</button>
                 </li>
                 <li>
                     <img src="./icons/filter.png" height="20px" ,width="20px">
@@ -97,7 +97,7 @@
                     <!-- <ul id="taskList" class="task-list"></ul> -->
                     
 
-                    <script src="./javascript/function.js"></script>
+                    <script src="./javascript/taskSet.js"></script>
                 </div>
             </div>
             <!-- Timer Overlay -->
@@ -125,9 +125,14 @@
         </div>
     </div>
     <script src="./javascript/java7.js"></script>
-    <script src="./javascript/delete.js"></script>
-    <script src="./javascript/function.js"></script>
+    <script src="./javascript/notes.js"></script>
+    <script src="./javascript/taskSet.js"></script>
     <script src="./javascript/taskCount.js"></script>
+    <script>
+        function calenderOpen() {
+            window.location.href = './calendar.html';
+        }
+    </script>
 
 </body>
 
