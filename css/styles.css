@@ -1,61 +1,115 @@
 /* styles.css */
 body {
-  font-family: Arial, sans-serif;
-  
+  font-family: "Tinos", serif;
   margin: 0;
   padding: 0;
 }
-
 .container {
+  position: fixed;
   display: flex;
-  height: 100vh;
-  position: relative;
+  flex-direction: row;
+  gap: 10px;
+  background-color: rgb(185, 141, 255);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: white
+}
+
+.cell{
+  /* background: linear-gradient(-45deg, #d19dff, #b678fc, #a54ffb, #8818f0, #6d00b0, #530087);
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
+  height: 100vh; */
+  padding: 20px
 }
 
 .sidebar {
-  width: 250px;
-  color: #ffffff;
   background-image: url('../backgrounds/bg4.jpg');
-  border-right: 0px solid #ccc;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+  width: 20%;
 }
 
-.sidebar .profile {
-  text-align: center;
+.menu
+{
+  display: flex;
+  height: 35px;
+  width: 90%;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 20px;
+  
+}
+.menu-option
+{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 15px;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+}
+.menu-option span{
+  margin-left: 10px;
+}
+.menu-option:hover
+{
+  background-color: rgb(92, 0, 172);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  
+}
+.header-sidebar
+{
+  height: 50px;
+  font-size: 2rem;
+}
+.profile
+{
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70px;
+  padding-left: 0;
   margin-bottom: 20px;
 }
-
-.sidebar .menu,
-.sidebar .projects ul,
-.sidebar .team ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar .menu li,
-.sidebar .projects li,
-.sidebar .team li {
-  margin-bottom: 10px;
-}
-
-.sidebar h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+.profile div{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-image: url('../backgrounds/bg1.jpg');
+  background-size: cover;
+  /* background-color: aliceblue; */
 }
 
 .main-content {
   background-image: url('../backgrounds/bg4.jpg');
-  color: #ffffff;
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 }
 
-.main-content h1 {
-  margin-top: 0;
+.header-title
+{
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  height: 50px;
+  width: 100%;
 }
 
 .tasks {
+  display: flex;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -65,6 +119,7 @@ body {
 
 .tasks ul {
   list-style-type: none;
+  width: 100%;
   padding: 0;
 }
 
@@ -247,9 +302,63 @@ body {
   animation-duration: 0.4s;
   
 }
+/* @keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+} */
 
-
-
+@media (max-width: 600px)
+{
+  .sidebar
+  {
+      width:80px;
+      padding: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      align-items: center;
+      gap: 20px;
+  }
+  .header-sidebar
+  {
+      display: none;
+  }
+  #sidebar-rule
+  {
+      display: none;
+  }
+  .menu-option
+  {
+      margin: 0;
+      padding: 0;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      
+  }
+  .menu-option svg
+  {
+      width: 42px;
+      height: 42px;
+  }
+  .menu-option span
+  {
+      display: none;
+  }
+  .profile
+  {
+      margin-bottom: 10px;
+  }
+  .profile div{
+      height: 40px;
+      width: 40px;
+  }
+}
 
 button:not(#plusBtn, #clockBtn, #binBtn, #tickBtn) {
   padding: 10px 15px;
