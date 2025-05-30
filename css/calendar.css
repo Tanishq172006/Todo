@@ -83,3 +83,14 @@ body {
     color: white;
     font-weight: bold;
 }
+@media (max-width: 600px)
+{
+    .calendar
+    {
+        height: 88%;
+    }
+    .calendar-grid div
+    {
+        height: 75px;
+    }
+}

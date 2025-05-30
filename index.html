@@ -73,7 +73,7 @@
                 <hr width="100%" />
                 <div></div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    class="bi bi-caret-down-fill" viewBox="0 0 16 16" id="drop-arrow">
                     <path
                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                 </svg>
@@ -109,21 +109,24 @@
             <!-- Overlay for Adding Tasks -->
             <div class="add-overlay" id="addOverlay">
                 <div class="overlay-content">
-                    <span class="closebtn" onclick="closeOverlay('addOverlay')">&times;</span>
-                    
-                    <h1>Your Tasks</h1>
-                    <div id="taskCount">Total Tasks: 0</div>
-                    <input type="text" id="title" placeholder="Task Title">
-                    <input type="text" id="description" placeholder="Task Description">
-                    <input type="time" id="time">
-                    <input type="date" id="date-input">
-                    <select id="priority">
+                    <div class="overlay-content-info">
+                        <div>Your Tasks</div>
+                        <span class="closebtn closeplusbtn" onclick="closeOverlay('addOverlay')">&times;</span>
+                    </div>
+                    <div id="taskCount" style="padding-top: 20px; padding-bottom:15px;">Total Tasks: 0</div>
+                    <div class="input-box"><div class="input-info"><input type="text" id="title" placeholder="Task Title"></div>
+                    <div class="input-info"><input type="text" id="description" placeholder="Task Description"></div>
+                    <div class="input-info"><input type="time" id="time"></div>
+                    <div class="input-info"><input type="date" id="date-input"></div>
+                    <div class="input-info"><select id="priority">
                         <option value="High">High</option>
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
-                    </select>
-                    <button onclick="setAlert()">Set Alert</button>
-                    <button onclick="addTask()">Add Task</button>
+                    </select></div>
+                    <div class="input-info buttons">
+                        <button onclick="setAlert()">Set Alert</button>
+                        <button onclick="addTask()">Add Task</button>
+                    </div>
                     <!-- <ul id="taskList" class="task-list"></ul> -->
                     
 
